@@ -35,7 +35,7 @@ function getResults (query) {
     weather_el.innerText = weather.weather[0].main;
   
     var hilow = document.querySelector('.high-low');
-    highlow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
+    hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
   }
   function dateBuilder (d) {
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];

@@ -1,6 +1,6 @@
 body{
     font-family:sans-serif;
-    background-image: url("resources/background.jfif");
+    background-image: url("resources/weather-forecast.jpg");
     background-size: cover;
     background-position:top center;
 }
