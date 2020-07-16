@@ -1,3 +1,4 @@
+/* background and properties for whole body */
 body{
     font-family:sans-serif;
     background-image: url("resources/weather-forecast.jpg");
@@ -11,14 +12,14 @@ header{
     align-items: center;
     padding: 50px 15px 15px;
 }
-
+/* properties and adjusments  for search field */
 header input{
     width: 100%;
     max-width: 350px;
     padding: 15px 15px;
     border: none;
     outline: none;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(44, 8, 8, 0.3);
     border-radius: 18px 0px 18px 0px;
     border-bottom: 3px solid #DF8E00;
     color: #313131;
@@ -28,11 +29,11 @@ header input{
 }
  
 
-
+/* background color when clicked on search field */
 header input:focus {
     background-color: rgba(255, 255, 255, 0.6);
   }
-  
+  /*how and in which color, width etc will be displayed onshwoing weather forecast */
   main {
     flex: 1 1 100%;
     padding: 25px 25px 50px;

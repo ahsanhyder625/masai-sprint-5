@@ -1,25 +1,27 @@
 // alert("hello")
+//API and API key
 const api={
     key:"2d428749461382aec70725c4da65e00c",
     base: "https://api.openweathermap.org/data/2.5/"
 
 }
+// selecting search field and adding listner
 const searchbox=document.querySelector(".search-field");
 searchbox.addEventListener("keypress",setQuery)
-
+// checking code
 function setQuery(event){
     if(event.keyCode==13){
         getResults(searchbox.value);
     }
 }
-
+//fetching results and displaying them though the function which we invoked
 function getResults (query) {
     fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
       .then(weather => {
         return weather.json();
       }).then(displayResults);
   }
-  
+ //display 
   function displayResults (weather) {
     var city = document.querySelector('.location .city');
     city.innerText = `${weather.name}, ${weather.sys.country}`;
