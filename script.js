@@ -38,7 +38,14 @@ function getResults (query) {
   
     var hilow = document.querySelector('.high-low');
     hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
+    emptyfield()
   }
+  
+function emptyfield(){
+  document.getElementById('emp').value=''
+  
+}
+
   function dateBuilder (d) {
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
