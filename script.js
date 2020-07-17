@@ -25,6 +25,7 @@ function getResults (query) {
   function displayResults (weather) {
     var city = document.querySelector('.location .city');
     city.innerText = `${weather.name}, ${weather.sys.country}`;
+    
   
     var now = new Date();
     var date = document.querySelector('.location .date');
@@ -38,9 +39,15 @@ function getResults (query) {
   
     var hilow = document.querySelector('.high-low');
     hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
+    displ()
     emptyfield()
   }
-  
+  function displ(){
+    if(weather.main.temp_min<18){
+      var div=document.querySelector("body")
+      div.background="yellow"
+    }
+  }
 function emptyfield(){
   document.getElementById('emp').value=''
   
